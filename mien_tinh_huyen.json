@@ -1,0 +1,543 @@
+{
+ "Miền Bắc": {
+  "T. Bắc Giang": [
+   "H. Hiệp Hòa",
+   "H. Lạng Giang",
+   "H. Lục Nam",
+   "H. Lục Ngạn",
+   "H. Tân Yên",
+   "H. Yên Dũng",
+   "H. Yên Thế",
+   "TP. Bắc Giang",
+   "TX. Chũ",
+   "TX. Việt Yên"
+  ],
+  "T. Bắc Kạn": [
+   "H. Ba Bể",
+   "H. Bạch Thông",
+   "H. Chợ Mới",
+   "T. Bắc Kạn",
+   "TP. Bắc Kạn"
+  ],
+  "T. Bắc Ninh": [
+   "H. Gia Bình",
+   "H. Lương Tài",
+   "H. Tiên Du",
+   "H. Yên Phong",
+   "TX. Quế Võ",
+   "TX. Thuận Thành"
+  ],
+  "T. Cao Bằng": [
+   "H. Hà Quảng",
+   "H. Hòa An",
+   "H. Nguyên Bình",
+   "H. Quảng Hòa",
+   "TP. Cao Bằng"
+  ],
+  "T. Hà Giang": [
+   "H. Bắc Mê",
+   "H. Bắc Quang",
+   "H. Mèo Vạc",
+   "H. Quang Bình",
+   "H. Quản Bạ",
+   "H. Vị Xuyên",
+   "H. Yên Minh",
+   "TP. Hà Giang"
+  ],
+  "T. Hà Nam": [
+   "H. Bình Lục",
+   "H. Kim Bảng",
+   "H. Lý Nhân",
+   "H. Thanh Liêm",
+   "TP. Phủ Lý",
+   "TX. Duy Tiên"
+  ],
+  "T. Hà Tĩnh": [
+   "H. Can Lộc",
+   "H. Cẩm Xuyên",
+   "H. Hương Khê",
+   "H. Hương Sơn",
+   "H. Kỳ Anh",
+   "H. Lộc Hà",
+   "H. Nghi Xuân",
+   "H. Thạch Hà",
+   "H. Đức Thọ",
+   "TP. Hà Tĩnh",
+   "TX. Kỳ Anh"
+  ],
+  "T. Hòa Bình": [
+   "H. Cao Phong",
+   "H. Kim Bôi",
+   "H. Lương Sơn",
+   "H. Lạc Sơn",
+   "H. Lạc Thủy",
+   "H. Mai Châu",
+   "H. Tân Lạc",
+   "H. Yên Thủy",
+   "H. Đà Bắc",
+   "TP. Hòa Bình"
+  ],
+  "T. Hưng Yên": [
+   "H. Khoái Châu",
+   "H. Kim Động",
+   "H. Phù Cừ",
+   "H. Tiên Lữ",
+   "H. Văn Giang",
+   "H. Văn Lâm",
+   "H. Yên Mỹ",
+   "H. Ân Thi",
+   "TX. Mỹ Hào"
+  ],
+  "T. Hải Dương": [
+   "H. Bình Giang",
+   "H. Cẩm Giàng",
+   "H. Gia Lộc",
+   "H. Kim Thành",
+   "H. Nam Sách",
+   "H. Ninh Giang",
+   "H. Thanh Hà",
+   "H. Thanh Miện",
+   "H. Tứ Kỳ",
+   "H. Tứ Lộc",
+   "TP. Chí Linh",
+   "TX. Kinh Môn"
+  ],
+  "T. Lai Châu": [
+   "H. Phong Thổ",
+   "H. Sìn Hồ",
+   "H. Than Uyên",
+   "H. Tân Uyên",
+   "TP. Lai Châu"
+  ],
+  "T. Lào Cai": [
+   "H. Bát Xát",
+   "H. Bảo Thắng",
+   "H. Bảo Yên",
+   "H. Bắc Hà",
+   "H. Mường Khương",
+   "H. Si Ma Cai",
+   "H. Văn Bàn",
+   "TP. Lào Cai",
+   "TX. Sa Pa"
+  ],
+  "T. Lạng Sơn": [
+   "H. Bắc Sơn",
+   "H. Cao Lộc",
+   "H. Lộc Bình",
+   "H. Văn Lãng",
+   "H. Đình Lập",
+   "TP. Lạng Sơn"
+  ],
+  "T. Nam Định": [
+   "H. Giao Thủy",
+   "H. Hải Hậu",
+   "H. Mỹ Lộc",
+   "H. Nam Trực",
+   "H. Nghĩa Hưng",
+   "H. Trực Ninh",
+   "H. Vụ Bản",
+   "H. Xuân Trường",
+   "H. Ý Yên",
+   "TP. Nam Định"
+  ],
+  "T. Nghệ An": [
+   "H. Anh Sơn",
+   "H. Con Cuông",
+   "H. Diễn Châu",
+   "H. Hưng Nguyên",
+   "H. Nam Đàn",
+   "H. Nghi Lộc",
+   "H. Nghĩa Đàn",
+   "H. Quế Phong",
+   "H. Quỳ Châu",
+   "H. Quỳ Hợp",
+   "H. Quỳnh Lưu",
+   "H. Thanh Chương",
+   "H. Tân Kỳ",
+   "H. Yên Thành",
+   "H. Đô Lương",
+   "TX. Hoàng Mai"
+  ],
+  "T. Ninh Bình": [
+   "H. Gia Viễn",
+   "H. Hoa Lư",
+   "H. Kim Sơn",
+   "H. Nho Quan",
+   "H. Yên Khánh",
+   "H. Yên Mô",
+   "TP. Tam Điệp"
+  ],
+  "T. Phú Thọ": [
+   "H. Cẩm Khê",
+   "H. Hạ Hòa",
+   "H. Lâm Thao",
+   "H. Phù Ninh",
+   "H. Tam Nông",
+   "H. Thanh Ba",
+   "H. Thanh Sơn",
+   "H. Thanh Thủy",
+   "H. Tân Sơn",
+   "H. Yên Lập",
+   "H. Đoan Hùng",
+   "TP. Việt Trì",
+   "TX. Phú Thọ"
+  ],
+  "T. Quảng Bình": [
+   "H. Bố Trạch",
+   "H. Lệ Thủy",
+   "H. Minh Hóa",
+   "H. Quảng Ninh",
+   "H. Quảng Trạch",
+   "H. Tuyên Hóa",
+   "TX. Ba Đồn"
+  ],
+  "T. Quảng Ninh": [
+   "H. Hải Hà",
+   "H. Tiên Yên",
+   "H. Đầm Hà",
+   "TP. Móng Cái",
+   "TP. Đông Triều",
+   "TX. Quảng Yên",
+   "TX. Đông Triều"
+  ],
+  "T. Sơn La": [
+   "H. Bắc Yên",
+   "H. Mai Sơn",
+   "H. Mường La",
+   "H. Mộc Châu",
+   "H. Phù Yên",
+   "H. Sông Mã",
+   "H. Sốp Cộp",
+   "H. Thuận Châu",
+   "H. Yên Châu",
+   "TP. Sơn La",
+   "TX. Mộc Châu"
+  ],
+  "T. Thanh Hóa": [
+   "H. Bá Thước",
+   "H. Cẩm Thủy",
+   "H. Hoằng Hóa",
+   "H. Hà Trung",
+   "H. Hậu Lộc",
+   "H. Lang Chánh",
+   "H. Nga Sơn",
+   "H. Ngọc Lặc",
+   "H. Như Thanh",
+   "H. Như Xuân",
+   "H. Nông Cống",
+   "H. Quan Hóa",
+   "H. Quan Sơn",
+   "H. Quảng Xương",
+   "H. Thiệu Hóa",
+   "H. Thường Xuân",
+   "H. Thạch Thành",
+   "H. Thọ Xuân",
+   "H. Triệu Sơn",
+   "H. Vĩnh Lộc",
+   "H. Yên Định",
+   "H. Đông Sơn",
+   "TP. Thanh Hóa",
+   "TX. Nghi Sơn"
+  ],
+  "T. Thái Bình": [
+   "H. Hưng Hà",
+   "H. Kiến Xương",
+   "H. Quỳnh Phụ",
+   "H. Thái Thụy",
+   "H. Tiền Hải",
+   "H. Vũ Thư",
+   "H. Đông Hưng"
+  ],
+  "T. Thái Nguyên": [
+   "H. Phú Bình",
+   "H. Phú Lương",
+   "H. Võ Nhai",
+   "H. Đại Từ",
+   "H. Định Hóa",
+   "H. Đồng Hỷ",
+   "TP. Phổ Yên",
+   "TP. Sông Công",
+   "TP. Thái Nguyên"
+  ],
+  "T. Tuyên Quang": [
+   "H. Chiêm Hóa",
+   "H. Hàm Yên",
+   "H. Lâm Bình",
+   "H. Na Hang",
+   "H. Sơn Dương",
+   "H. Yên Sơn",
+   "TP. Tuyên Quang"
+  ],
+  "T. Vĩnh Phúc": [
+   "H. Bình Xuyên",
+   "H. Lập Thạch",
+   "H. Sông Lô",
+   "H. Tam Dương",
+   "H. Tam Đảo",
+   "H. Vĩnh Tường",
+   "H. Yên Lạc"
+  ],
+  "T. Yên Bái": [
+   "H. Lục Yên",
+   "H. Trạm Tấu",
+   "H. Trấn Yên",
+   "H. Văn Chấn",
+   "H. Văn Yên",
+   "H. Yên Bình",
+   "TP. Yên Bái",
+   "TX. Nghĩa Lộ"
+  ],
+  "T. Điện Biên": [
+   "H. Mường Chà",
+   "H. Tuần Giáo",
+   "H. Tủa Chùa",
+   "H. Điện Biên",
+   "TP. Điện Biên Phủ",
+   "TX. Mường Lay"
+  ],
+  "TP. Hà Nội": [
+   "H. Ba Vì",
+   "H. Chương Mỹ",
+   "H. Gia Lâm",
+   "H. Hoài Đức",
+   "H. Mê Linh",
+   "H. Mỹ Đức",
+   "H. Phú Xuyên",
+   "H. Phúc Thọ",
+   "H. Quốc Oai",
+   "H. Sóc Sơn",
+   "H. Thanh Oai",
+   "H. Thanh Trì",
+   "H. Thường Tín",
+   "H. Thạch Thất",
+   "H. Đan Phượng",
+   "H. Đông Anh",
+   "H. Ứng Hòa"
+  ],
+  "TP. Hải Phòng": [
+   "H. An Dương",
+   "H. An Lão",
+   "H. Kiến Thụy",
+   "H. Thủy Nguyên",
+   "H. Tiên Lãng",
+   "H. Vĩnh Bảo",
+   "Q. An Dương",
+   "Q. Dương Kinh",
+   "TP. Thủy Nguyên"
+  ]
+ },
+ "Miền Nam": {
+  "T. Bà Rịa - Vũng Tàu": [
+   "H. Long Điền",
+   "TP. Bà Rịa",
+   "TX. Phú Mỹ",
+   "Tp. Bà Rịa"
+  ],
+  "T. Bình Dương": [
+   "H. Dầu Tiếng",
+   "H. Phú Giáo",
+   "TP. Bến Cát",
+   "TP. Thuận An",
+   "TP. Tân Uyên",
+   "TX. Bến Cát",
+   "TX. Tân Uyên"
+  ],
+  "T. Bình Phước": [
+   "H. Phú Riềng",
+   "H. Phước Long",
+   "TP. Đồng Xoài",
+   "TX. Phước Long"
+  ],
+  "T. Bình Thuận": [
+   "H. Hàm Tân",
+   "H. Tuy Phong"
+  ],
+  "T. Ninh Thuận": [
+   "H. Ninh Hải",
+   "TP. Phan Rang-Tháp Chàm"
+  ],
+  "T. Đồng Nai": [
+   "H. Long Thành",
+   "H. Nhơn Trạch",
+   "H. Trảng Bom",
+   "H. Tân Phú",
+   "H. Vĩnh Cửu",
+   "H. Xuân Lộc",
+   "H. Định Quán",
+   "TP. Long Khánh"
+  ],
+  "TP. Hồ Chí Minh": [
+   "H. Bình Chánh",
+   "H. Củ Chi",
+   "H. Hóc Môn",
+   "H. Nhà Bè",
+   "Q. 12"
+  ]
+ },
+ "Miền Trung": {
+  "T. Bình Thuận": [
+   "TX. La Gi"
+  ],
+  "T. Bình Định": [
+   "H. Hoài Ân",
+   "H. Phù Cát",
+   "H. Phù Mỹ",
+   "H. Tuy Phước",
+   "H. Tây Sơn",
+   "H. Vân Canh",
+   "H. Vĩnh Thạnh",
+   "TX. An Nhơn",
+   "TX. Hoài Nhơn",
+   "Tx. An Nhơn"
+  ],
+  "T. Gia Lai": [
+   "H. Chư Pah",
+   "H. Chư Prông",
+   "H. Chư Păh",
+   "H. Chư Pưh",
+   "H. Chư Sê",
+   "H. Ia Grai",
+   "H. Ia Pa",
+   "H. Krông Pa",
+   "H. Kông Chro",
+   "H. Mang Yang",
+   "H. Phú Thiện",
+   "H. Đak Pơ",
+   "H. Đak Đoa",
+   "H. Đức Cơ",
+   "TT. Phú Túc",
+   "TX. An Khê",
+   "TX. Ayun Pa",
+   "Tx. Ayun Pa"
+  ],
+  "T. Khánh Hòa": [
+   "H. Diên Khánh",
+   "TP. Cam Ranh",
+   "TP. Nha Trang"
+  ],
+  "T. Kon Tum": [
+   "H. Kon Plông",
+   "H. Kon Rẫy",
+   "H. Ngọc Hồi",
+   "H. Ngọc Hồi",
+   "H. Sa Thầy",
+   "H. Đăk Hà",
+   "H. Đắk Tô",
+   "TP. Kon Tum"
+  ],
+  "T. Lâm Đồng": [
+   "H. Đức Trọng"
+  ],
+  "T. Phú Yên": [
+   "H. Tuy An",
+   "H. Tây Hoà",
+   "TP. Tuy Hòa"
+  ],
+  "T. Quảng Nam": [
+   "H. Bắc Trà My",
+   "H. Duy Xuyên",
+   "H. Hiệp Đức",
+   "H. Núi Thành",
+   "H. Phú Ninh",
+   "H. Phước Sơn",
+   "H. Quế Sơn",
+   "H. Thăng Bình",
+   "H. Tiên Phước",
+   "H. Điện Bàn",
+   "H. Đông Giang",
+   "H. Đại Lộc",
+   "TP. Tam Kỳ",
+   "TX. Điện Bàn",
+   "TX. Điện Ngọc",
+   "X. Bình Minh"
+  ],
+  "T. Quảng Ngãi": [
+   "H. Ba Tơ",
+   "H. Bình Sơn",
+   "H. Minh Long",
+   "H. Mộ Đức",
+   "H. Nghĩa Hành",
+   "H. Sơn Hà",
+   "H. Sơn Tịnh",
+   "H. Tư Nghĩa",
+   "TP. Quảng Ngãi",
+   "TX. Đức Phổ"
+  ],
+  "T. Quảng Trị": [
+   "H. Cam Lộ",
+   "H. Gio Linh",
+   "H. Hướng Hóa",
+   "H. Hải Lăng",
+   "H. Triệu Phong",
+   "H. Vĩnh Linh",
+   "TX. Quảng Trị",
+   "Tx. Quảng Trị"
+  ],
+  "T. Thừa Thiên - Huế": [
+   "H. Hương Thủy",
+   "H. Phú Lộc",
+   "H. Phú Vang",
+   "H. Quảng Điền",
+   "Q. Thuận Hóa",
+   "TP. Huế",
+   "TX. Hương Thủy",
+   "TX. Hương Trà",
+   "Vinh Hiền"
+  ],
+  "T. Đắk Lắk": [
+   "H. Cư M'gar"
+  ],
+  "TP. Đà Nẵng": [
+   "H. Hòa Vang"
+  ]
+ },
+ "Miền Tây": {
+  "T. An Giang": [
+   "H. Châu Phú",
+   "H. Châu Thành",
+   "H. Chợ Mới",
+   "H. Thoại Sơn",
+   "H. Tịnh Biên",
+   "TP. Châu Đốc",
+   "TX. Tân Châu"
+  ],
+  "T. Bạc Liêu": [
+   "TP. Bạc Liêu"
+  ],
+  "T. Bến Tre": [
+   "H. Giồng Trôm",
+   "TP. Bến Tre"
+  ],
+  "T. Cà Mau": [
+   "H. Cái Nước",
+   "H. Năm Căn",
+   "H. Thới Bình",
+   "H. Trần Văn Thời",
+   "H. U Minh",
+   "H. Đầm Dơi",
+   "TP. Cà Mau",
+   "TT. Trần Văn Thời"
+  ],
+  "T. Long An": [
+   "H. Bến Lức"
+  ],
+  "T. Sóc Trăng": [
+   "H. Kế Sách",
+   "H. Mỹ Xuyên",
+   "H. Thạnh Trị",
+   "TP. Sóc Trăng"
+  ],
+  "T. Tiền Giang": [
+   "H. Gò Công Đông",
+   "TX. Cai Lậy",
+   "TX. Gò Công"
+  ],
+  "T. Trà Vinh": [
+   "TP. Trà Vinh",
+   "TX. Duyên Hải"
+  ],
+  "T. Đồng Tháp": [
+   "TP. Cao Lãnh"
+  ]
+ }
+}
