@@ -190,6 +190,8 @@ tr:hover{background:#fff5f5}
 
 <script>
 const APP_DATA_KEY = 'gioi-thieu-nha-thau-config';
+const TABLE = 'nha_thau';
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbwPmh_Erk9eDbpNCMQePscfl067merQamb1xfvKbtjyUmjw3jTUU4Z43LzziuQb7H1X/exec';
 const HANG_MUC_LIST = [
   'Cơ khí','Cửa cuốn, kính','Điện, nước công trình','Nội thất',
   'Quảng cáo, biển bảng','Sơn, chống thấm','Thi công trọn gói',
@@ -216,13 +218,19 @@ function setConfig(cfg) { localStorage.setItem(APP_DATA_KEY, JSON.stringify(cfg)
 
 function loadConfig() {
   const cfg = getConfig();
+  document.getElementById('gasUrl').value = cfg.gasUrl || GAS_URL;
   if (cfg.gasUrl) {
-    document.getElementById('gasUrl').value = cfg.gasUrl;
     document.getElementById('savedUrlHint').textContent = '✅ Đã lưu GAS URL';
+  } else {
+    document.getElementById('savedUrlHint').textContent = 'ℹ️ Đang dùng GAS dùng chung (mặc định)';
   }
   // Init filter dropdown
   const sel = document.getElementById('filterHangMuc');
   HANG_MUC_LIST.forEach(h => { const o = document.createElement('option'); o.value = h; o.textContent = h; sel.appendChild(o); });
+}
+
+function getGasUrl() {
+  return getConfig().gasUrl || GAS_URL;
 }
 
 function saveGasUrl() {
@@ -237,8 +245,7 @@ function saveGasUrl() {
 
 // ========== SUBMIT ==========
 async function submitForm() {
-  const cfg = getConfig();
-  if (!cfg.gasUrl) return showToast('⚠️ Vui lòng cấu hình GAS URL trước', 'error');
+  const gasUrl = getGasUrl();
 
   const hangMuc = document.getElementById('hangMuc').value.trim();
   const tenCty = document.getElementById('tenCty').value.trim();
@@ -258,11 +265,12 @@ async function submitForm() {
   btn.textContent = '⏳ Đang gửi...';
 
   try {
-    const resp = await fetch(cfg.gasUrl, {
+    const resp = await fetch(gasUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify({
         action: 'save',
+        table: TABLE,
         data: { hangMuc, tenCty, nguoiDaiDien, sdt, tinhThanh, phuongXa }
       })
     });
@@ -292,15 +300,10 @@ function clearForm() {
 
 // ========== DASHBOARD ==========
 async function loadDashboard() {
-  const cfg = getConfig();
-  if (!cfg.gasUrl) {
-    document.getElementById('tableContainer').innerHTML = '<div class="empty"><div class="icon">⚙️</div><p>Vui lòng cấu hình GAS URL ở tab Khai báo</p></div>';
-    document.getElementById('statsContainer').innerHTML = '';
-    return;
-  }
+  const gasUrl = getGasUrl();
 
   try {
-    const resp = await fetch(cfg.gasUrl + '?action=list');
+    const resp = await fetch(gasUrl + '?action=list&table=' + TABLE);
     const result = await resp.json();
     const allData = result.data || [];
 
