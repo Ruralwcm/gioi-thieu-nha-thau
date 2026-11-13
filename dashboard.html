@@ -26,22 +26,30 @@
   .btn.light{background:#fff; color:var(--navy); border:1.5px solid var(--line)}
   .btn.sm{padding:7px 11px; font-size:12px; border-radius:8px}
 
-  .wrap{max-width:1280px; margin:0 auto; padding:18px}
+  .wrap{max-width:100%; margin:0 auto; padding:14px 16px}
+  .layout{display:flex; gap:14px; align-items:flex-start}
+
+  /* Left sidebar — KPI + charts */
+  .left{flex:0 0 360px; min-width:320px; display:flex; flex-direction:column; gap:12px;
+    position:sticky; top:14px; max-height:calc(100vh - 28px); overflow-y:auto; align-self:flex-start}
+
+  /* Right — filter + list */
+  .right{flex:1; min-width:0; display:flex; flex-direction:column; gap:12px}
 
   /* KPI */
-  .kpis{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:16px}
-  .kpi{background:var(--card); border-radius:12px; padding:16px; border:1px solid var(--line);
+  .kpis{display:grid; grid-template-columns:repeat(2,1fr); gap:8px}
+  .kpi{background:var(--card); border-radius:12px; padding:14px 10px; border:1px solid var(--line);
     box-shadow:0 1px 4px rgba(20,30,60,.05); text-align:center; cursor:pointer; transition:.15s; position:relative}
   .kpi:hover{box-shadow:0 4px 14px rgba(20,30,60,.12); transform:translateY(-2px)}
   .kpi.active{border-color:var(--navy); box-shadow:0 0 0 2px rgba(26,60,110,.15)}
-  .kpi .n{font-size:28px; font-weight:800; color:var(--navy)}
-  .kpi .l{font-size:11.5px; color:var(--mut); margin-top:3px}
+  .kpi .n{font-size:24px; font-weight:800; color:var(--navy)}
+  .kpi .l{font-size:11px; color:var(--mut); margin-top:3px}
   .kpi.total .n{color:var(--red)}
 
   /* Filter bar */
   .fbar{background:var(--card); border-radius:12px; padding:14px; border:1px solid var(--line);
-    margin-bottom:16px; display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end}
-  .fld{display:flex; flex-direction:column; gap:4px; min-width:140px; flex:1}
+    display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end}
+  .fld{display:flex; flex-direction:column; gap:4px; min-width:120px; flex:1}
   .fld label{font-size:11px; font-weight:600; color:var(--mut)}
   .fld input,.fld select{font-size:13px; font-family:inherit; padding:8px 10px; border:1.5px solid var(--line);
     border-radius:8px; background:#fafbfd; outline:none; color:var(--txt)}
@@ -49,11 +57,11 @@
   .fbar .btn{margin-left:auto}
 
   /* Charts */
-  .charts{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:16px}
-  .chart-card{background:var(--card); border-radius:12px; padding:16px; border:1px solid var(--line)}
-  .chart-card h3{font-size:13.5px; font-weight:700; color:var(--navy); margin-bottom:10px}
-  .chart-box{position:relative; height:260px}
-  .chart-box.tall{height:300px}
+  .charts{display:grid; grid-template-columns:1fr; gap:12px}
+  .chart-card{background:var(--card); border-radius:12px; padding:14px; border:1px solid var(--line)}
+  .chart-card h3{font-size:13px; font-weight:700; color:var(--navy); margin-bottom:8px}
+  .chart-box{position:relative; height:200px}
+  .chart-box.tall{height:250px}
   .time-ctrl{display:flex; gap:6px; margin-bottom:8px}
   .time-ctrl button{border:1px solid var(--line); background:#f6f8fb; color:var(--mut); border-radius:7px;
     padding:5px 10px; font-size:11.5px; font-weight:600; cursor:pointer; font-family:inherit}
@@ -65,13 +73,13 @@
     border-bottom:1px solid var(--line); flex-wrap:wrap; gap:8px}
   .tcard .thead .t{font-size:14px; font-weight:800; color:var(--navy)}
   .tcard .thead .cnt{font-size:12px; color:var(--mut)}
-  .tbl-wrap{overflow-x:auto}
-  table{width:100%; border-collapse:collapse; font-size:13px; min-width:820px}
+  .tbl-wrap{overflow:auto; max-height:calc(100vh - 250px); min-height:340px}
+  table{width:100%; border-collapse:collapse; font-size:13px}
   th{background:var(--navy); color:#fff; padding:10px 10px; text-align:left; font-weight:700;
-    white-space:nowrap; font-size:12px; cursor:pointer; user-select:none; position:sticky; top:0}
+    white-space:normal; font-size:12px; cursor:pointer; user-select:none; position:sticky; top:0; z-index:1}
   th .arr{opacity:.5; font-size:10px}
   th.sorted .arr{opacity:1}
-  td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+  td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top; white-space:normal; word-break:break-word}
   tr:hover td{background:#f6f9ff}
   tr:last-child td{border-bottom:none}
   .tag{display:inline-block; background:#eef3fb; color:var(--navy); padding:3px 9px; border-radius:12px;
@@ -135,7 +143,13 @@
   .foot{text-align:center; color:#9aa3b2; font-size:11px; padding:16px 0 24px}
   .foot a{color:var(--navy); text-decoration:none; font-weight:600}
 
-  @media(max-width:900px){ .charts{grid-template-columns:1fr} .topbar h1{font-size:16px} }
+  @media(max-width:980px){
+    .layout{flex-direction:column}
+    .left{position:static; max-height:none; overflow:visible; flex:1 1 auto; width:100%}
+    .right{width:100%}
+    .tbl-wrap{max-height:none}
+    .topbar h1{font-size:16px}
+  }
   @media(max-width:480px){ .kpis{grid-template-columns:1fr 1fr} }
 </style>
 </head>
@@ -152,51 +166,57 @@
 </div>
 
 <div class="wrap">
-  <div class="kpis" id="kpiBar"></div>
+  <div class="layout">
+    <div class="left">
+      <div class="kpis" id="kpiBar"></div>
 
-  <div class="fbar" id="filterBar">
-    <div class="fld"><label>Hạng mục</label><select id="fHangMuc"><option value="">Tất cả hạng mục</option></select></div>
-    <div class="fld"><label>Miền</label><select id="fMien"><option value="">Tất cả Miền</option></select></div>
-    <div class="fld"><label>Tỉnh</label><select id="fTinh"><option value="">Tất cả Tỉnh</option></select></div>
-    <div class="fld"><label>Trạng thái</label><select id="fTrangThai"><option value="">Tất cả trạng thái</option></select></div>
-    <div class="fld"><label>Từ ngày</label><input type="date" id="fTuNgay"></div>
-    <div class="fld"><label>Đến ngày</label><input type="date" id="fDenNgay"></div>
-    <div class="fld" style="flex:1.6"><label>🔍 Tìm kiếm</label><input type="text" id="fSearch" placeholder="Tên CTY · Người ĐD · SĐT · Khu vực"></div>
-    <button class="btn light" onclick="resetFilters()">↺ Reset</button>
-  </div>
-
-  <div class="charts">
-    <div class="chart-card">
-      <h3>🏷️ Nhà thầu theo Hạng mục</h3>
-      <div class="chart-box"><canvas id="chHangMuc"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <h3>🗺️ Nhà thầu theo Miền</h3>
-      <div class="chart-box"><canvas id="chMien"></canvas></div>
-    </div>
-    <div class="chart-card">
-      <h3>📈 Nhà thầu theo thời gian</h3>
-      <div class="time-ctrl" id="timeCtrl">
-        <button data-t="day" class="active">Ngày</button>
-        <button data-t="week">Tuần</button>
-        <button data-t="month">Tháng</button>
-        <button data-t="quarter">Quý</button>
+      <div class="charts">
+        <div class="chart-card">
+          <h3>🏷️ Nhà thầu theo Hạng mục</h3>
+          <div class="chart-box"><canvas id="chHangMuc"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>🗺️ Nhà thầu theo Miền</h3>
+          <div class="chart-box"><canvas id="chMien"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>📈 Nhà thầu theo thời gian</h3>
+          <div class="time-ctrl" id="timeCtrl">
+            <button data-t="day" class="active">Ngày</button>
+            <button data-t="week">Tuần</button>
+            <button data-t="month">Tháng</button>
+            <button data-t="quarter">Quý</button>
+          </div>
+          <div class="chart-box"><canvas id="chTime"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>🧩 Phân bổ Hạng mục × Miền</h3>
+          <div class="chart-box tall"><canvas id="chCross"></canvas></div>
+        </div>
       </div>
-      <div class="chart-box"><canvas id="chTime"></canvas></div>
     </div>
-    <div class="chart-card">
-      <h3>🧩 Phân bổ Hạng mục × Miền</h3>
-      <div class="chart-box tall"><canvas id="chCross"></canvas></div>
-    </div>
-  </div>
 
-  <div class="tcard">
-    <div class="thead">
-      <div><span class="t">Danh sách nhà thầu</span> <span class="cnt" id="cntInfo"></span></div>
-      <button class="btn light sm" onclick="exportCSV()">📥 CSV</button>
+    <div class="right">
+      <div class="fbar" id="filterBar">
+        <div class="fld"><label>Hạng mục</label><select id="fHangMuc"><option value="">Tất cả hạng mục</option></select></div>
+        <div class="fld"><label>Miền</label><select id="fMien"><option value="">Tất cả Miền</option></select></div>
+        <div class="fld"><label>Tỉnh</label><select id="fTinh"><option value="">Tất cả Tỉnh</option></select></div>
+        <div class="fld"><label>Trạng thái</label><select id="fTrangThai"><option value="">Tất cả trạng thái</option></select></div>
+        <div class="fld"><label>Từ ngày</label><input type="date" id="fTuNgay"></div>
+        <div class="fld"><label>Đến ngày</label><input type="date" id="fDenNgay"></div>
+        <div class="fld" style="flex:1.6"><label>🔍 Tìm kiếm</label><input type="text" id="fSearch" placeholder="Tên CTY · Người ĐD · SĐT · Khu vực"></div>
+        <button class="btn light" onclick="resetFilters()">↺ Reset</button>
+      </div>
+
+      <div class="tcard">
+        <div class="thead">
+          <div><span class="t">Danh sách nhà thầu</span> <span class="cnt" id="cntInfo"></span></div>
+          <button class="btn light sm" onclick="exportCSV()">📥 CSV</button>
+        </div>
+        <div class="tbl-wrap" id="tblBox"><div class="empty">Đang tải dữ liệu...</div></div>
+        <div class="pager" id="pager"></div>
+      </div>
     </div>
-    <div class="tbl-wrap" id="tblBox"><div class="empty">Đang tải dữ liệu...</div></div>
-    <div class="pager" id="pager"></div>
   </div>
 
   <div class="foot">WinMart+ Rural · Dashboard Nhà Thầu · <a href="#" onclick="location.href='index.html';return false;">← Về form khai báo</a></div>
@@ -531,9 +551,9 @@ function renderTable(){
       <td><span class="cty" onclick="openDetail('${esc(r.id)}')">${esc(r.tenCty)}</span></td>
       <td>${esc(r.nguoiDaiDien)}</td>
       <td class="sdt">${r.sdt?`<a href="tel:${esc(r.sdt)}">${esc(r.sdt)}</a>`:'—'}</td>
-      <td style="max-width:200px">${esc(r.khuVuc)||'—'}</td>
+      <td style="max-width:220px">${esc(r.khuVuc)||'—'}</td>
       <td>${esc(r.mien)||'—'}</td>
-      <td style="white-space:nowrap">${esc(fmtDate(r.thoiGian))}</td>
+      <td>${esc(fmtDate(r.thoiGian))}</td>
       <td><span class="st ${stc}">${esc(r.trangThai)}</span></td>
       <td><div class="row-actions">
         <button class="icon-btn" title="Chỉnh sửa" onclick="openEdit('${esc(r.id)}')">✏️</button>
