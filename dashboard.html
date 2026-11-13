@@ -157,6 +157,7 @@
   <div class="fbar" id="filterBar">
     <div class="fld"><label>Hạng mục</label><select id="fHangMuc"><option value="">Tất cả hạng mục</option></select></div>
     <div class="fld"><label>Miền</label><select id="fMien"><option value="">Tất cả Miền</option></select></div>
+    <div class="fld"><label>Tỉnh</label><select id="fTinh"><option value="">Tất cả Tỉnh</option></select></div>
     <div class="fld"><label>Trạng thái</label><select id="fTrangThai"><option value="">Tất cả trạng thái</option></select></div>
     <div class="fld"><label>Từ ngày</label><input type="date" id="fTuNgay"></div>
     <div class="fld"><label>Đến ngày</label><input type="date" id="fDenNgay"></div>
@@ -287,13 +288,14 @@ let detailId = null, delId = null;
 
 // ============ NORMALIZE ============
 function norm(r){
-  const khuVuc = r.khuVuc || [r.huyen, r.tinh, r.tinhThanh].filter(Boolean).join(', ') || '';
+  const tinh = r.tinh || r.tinhThanh || '';
+  const khuVuc = r.khuVuc || [r.huyen, tinh].filter(Boolean).join(', ') || '';
   const thoiGian = r.thoiGian || r.created_at || '';
   const trangThai = r.trangThai || 'Đang hoạt động';
   const ghiChu = r.ghiChu || r.thongTin || '';
   return {
     id: r.id, hangMuc: r.hangMuc||'', tenCty: r.tenCty||'', nguoiDaiDien: r.nguoiDaiDien||'',
-    sdt: String(r.sdt||''), khuVuc, mien: r.mien||'', thoiGian, trangThai, ghiChu,
+    sdt: String(r.sdt||''), khuVuc, tinh, mien: r.mien||'', thoiGian, trangThai, ghiChu,
     created_at: r.created_at||''
   };
 }
@@ -327,8 +329,10 @@ async function loadData(){
 function initFilterOptions(){
   const hm = [...new Set(ALL.map(r=>r.hangMuc).filter(Boolean))].sort();
   const mi = [...new Set(ALL.map(r=>r.mien).filter(Boolean))].sort();
+  const tinh = [...new Set(ALL.map(r=>r.tinh).filter(Boolean))].sort();
   fillSelect('fHangMuc', hm, 'Tất cả hạng mục');
   fillSelect('fMien', mi, 'Tất cả Miền');
+  fillSelect('fTinh', tinh, 'Tất cả Tỉnh');
   fillSelect('fTrangThai', TRANG_THAI, 'Tất cả trạng thái');
 }
 function fillSelect(id, list, placeholder){
@@ -341,6 +345,7 @@ function fillSelect(id, list, placeholder){
 // ============ FILTERS ============
 function applyFilters(){
   const fh = $('fHangMuc').value, fm = $('fMien').value, ft = $('fTrangThai').value;
+  const ftinh = $('fTinh').value;
   const q = $('fSearch').value.trim().toLowerCase();
   const tu = $('fTuNgay').value, den = $('fDenNgay').value;
   const hm = kpiFilter || fh;
@@ -348,6 +353,7 @@ function applyFilters(){
   let data = ALL.filter(r => {
     if(hm && r.hangMuc !== hm) return false;
     if(fm && r.mien !== fm) return false;
+    if(ftinh && r.tinh !== ftinh) return false;
     if(ft && r.trangThai !== ft) return false;
     if(tu || den){
       const d = parseDate(r.thoiGian);
@@ -371,7 +377,7 @@ function applyFilters(){
 
 function resetFilters(){
   kpiFilter = null;
-  ['fHangMuc','fMien','fTrangThai','fTuNgay','fDenNgay','fSearch'].forEach(id => $(id).value='');
+  ['fHangMuc','fMien','fTinh','fTrangThai','fTuNgay','fDenNgay','fSearch'].forEach(id => $(id).value='');
   applyFilters();
 }
 
@@ -711,7 +717,7 @@ function showToast(msg, isErr){
     b.classList.add('active'); timeMode = b.dataset.t; renderTimeChart();
   });
   // live filter events
-  ['fHangMuc','fMien','fTrangThai'].forEach(id => $(id).addEventListener('change', ()=>{ kpiFilter=null; applyFilters(); }));
+  ['fHangMuc','fMien','fTinh','fTrangThai'].forEach(id => $(id).addEventListener('change', ()=>{ kpiFilter=null; applyFilters(); }));
   $('fSearch').addEventListener('input', applyFilters);
   $('fTuNgay').addEventListener('change', applyFilters);
   $('fDenNgay').addEventListener('change', applyFilters);
